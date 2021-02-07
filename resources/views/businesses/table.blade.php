@@ -24,8 +24,8 @@
             <td>{{ $business->location }}</td>
             <td>{{ $business->schedule }}</td>
             <td>{{ $business->phone }}</td>
-            <td>{{ $business->service_id }}</td>
-            <td>{{ $business->category_id }}</td>
+            <td>{{ $business->service->service_type}}</td>
+            <td>{{ $business->category->category_name }}</td>
             <td>{{ $business->references }}</td>
             <td>{{ $business->owner }}</td>
                 <td width="120">

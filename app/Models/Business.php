@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Category;
+use App\TypeService;
 
 /**
  * Class Business
@@ -82,5 +84,13 @@ class Business extends Model
         'owner' => 'required'
     ];
 
-    
+    public function category(){
+
+        return $this->hasOne(Category::class,'id','category_id');
+    }
+
+    public function service(){
+        
+        return $this->hasOne(TypeService::class,'id','service_id');
+    }
 }
