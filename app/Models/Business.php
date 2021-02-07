@@ -70,11 +70,11 @@ class Business extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|string|100',
-        'image' => 'required|string|100',
-        'adress' => 'required|string|100',
-        'location' => 'required|string|100',
-        'schedule' => 'required|string|100',
+        'name' => 'required|string|max:100',
+        'image' => 'required',
+        'adress' => 'required|string|max:100',
+        'location' => 'required|string|max:100',
+        'schedule' => 'required|string|max:100',
         'phone' => 'max:10|min:10',
         'service_id' => 'required',
         'category_id' => 'required',

@@ -29,6 +29,12 @@
     {!! Form::text('location', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Schedule Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('schedule', 'Schedule:') !!}
+    {!! Form::time('schedule', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('phone', 'Phone:') !!}
