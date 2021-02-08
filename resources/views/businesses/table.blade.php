@@ -2,16 +2,16 @@
     <table class="table" id="businesses-table">
         <thead>
             <tr>
-                <th>Name</th>
-        <th>Image</th>
-        <th>Adress</th>
-        <th>Location</th>
-        <th>Schedule</th>
-        <th>Phone</th>
-        <th>Service Id</th>
-        <th>Category Id</th>
-        <th>References</th>
-        <th>Owner</th>
+                <th>Nombre</th>
+        <th>Foto</th>
+        <th>Dirección</th>
+        <th>Ubicación</th>
+        <th>Horario</th>
+        <th>Numero de celular</th>
+        <th>Tipo de servicio</th>
+        <th>Categoría</th>
+        <th>Referencias</th>
+        <th>Proietario</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -37,7 +37,7 @@
                         <a href="{{ route('businesses.edit', [$business->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estás seguro de eliminar?')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>

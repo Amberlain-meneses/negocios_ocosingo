@@ -39,7 +39,7 @@
 
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
+            <p class="login-box-msg">Recuperar contraseña ahora!</p>
 
             <form action="{{ route('password.update') }}" method="POST">
                 @csrf
@@ -51,7 +51,7 @@
                            name="email"
                            value="{{ $email ?? old('email') }}"
                            class="form-control @error('email') is-invalid @enderror"
-                           placeholder="Email">
+                           placeholder="Correo electrónico">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
                     </div>
@@ -64,7 +64,7 @@
                     <input type="password"
                            name="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="Password">
+                           placeholder="Contraseña">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -77,7 +77,7 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="Confirm Password">
+                           placeholder="Confirmar contraseña">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -85,14 +85,14 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
+                        <button type="submit" class="btn btn-outline-success btn-block">Restablecer contraseña</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
             <p class="mt-3 mb-1">
-                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('login') }}">Iniciar sesión</a>
             </p>
         </div>
         <!-- /.login-card-body -->
