@@ -47,7 +47,7 @@
                    
                       <h5 class="titleCarousel">Bienvenido</h5>
                       <p class="">¿Todavía no tienes una cuenta? <br>has clic para registrarte</p>
-                      <a href="{{ route('register') }}" class="btn btn-outline-success">Registrar Nuevo Administrador</a>
+                      <a href="{{ route('register') }}" class="btn btn-outline-success" id="btnNewAdministrator">Registrar Nuevo Administrador</a>
                     </div>
                    
                   </div>
@@ -109,7 +109,7 @@
                                 <label for="remember">Recordar siempre</label>
                             </div>
                             <p class="mb-4">
-                                <a id="olvidador" href="{{ route('password.request') }}" class="text-center">Olvidé mi contraseña</a>
+                                <a id="forgotPassword" href="{{ route('password.request') }}" class="text-center">Olvidé mi contraseña</a>
                             </p>
                         </div>
     

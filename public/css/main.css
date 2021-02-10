@@ -1,5 +1,6 @@
-#content-global{
-    overflow: hidden;
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .titleForm{
     margin-left: auto;
@@ -31,17 +32,19 @@
     color: #28df99;;
     border-color: #28df99;
     width: 60%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #btnAccess:hover{
    color: #fff;
    font-weight: 700;
    background: #28df99;
 }
-#olvidador{
+#forgotPassword{
     text-decoration: none;
     color: #557571;
 }
-#olvidador:hover{
+#forgotPassword:hover{
     text-decoration: none;
     color: #28df99;;
 }
@@ -77,6 +80,20 @@
     margin-right: auto;
     margin-block-end: 60%;
     
+}
+
+#btnNewAdministrator{
+    border-radius: 15px;
+    color: #28df99;;
+    border-color: #28df99;
+    width: 60%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#btnNewAdministrator:hover{
+    color: #fff;
+    font-weight: 700;
+    background: #28df99;
 }
 
 
