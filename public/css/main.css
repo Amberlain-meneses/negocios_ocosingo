@@ -84,8 +84,9 @@ body{
 
 #btnNewAdministrator{
     border-radius: 15px;
-    color: #28df99;;
+    color: #ffff;
     border-color: #28df99;
+    font-weight: 700;
     width: 60%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -96,5 +97,42 @@ body{
     background: #28df99;
 }
 
+/*Form Registrer*/
+
+.titleFormRegistrer{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top:  30%;
+   
+}
+
+/*Btn return login*/
+#btnReturnLogin{
+    border-radius: 15px;
+    color: #ffff;
+    border-color: #fff;
+    font-weight: 700;
+    width: 60%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#btnReturnLogin:hover{
+    color: #fff;
+    font-weight: 700;
+    background: #28df99;
+}
+/*hero registrer*/
+.img-register{
+    background-image: linear-gradient(to right top, #6bd17d,
+     #74d57f, #7dda80, #86de82, #8fe284, 
+     #8be68e, #88ea98, #85eea2, 
+     #76f2b7, #69f6cc, #60f9df, #5ffbf1);
+    background-size: cover;
+    background-position: center;
+}
 
 
