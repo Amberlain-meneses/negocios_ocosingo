@@ -53,9 +53,10 @@ body{
 
 .img-1 {
     background-image: url('../img/tienda.jpg');
-    opacity: 70%;
     background-size: cover;
     background-position: center;
+    opacity: 70%;
+
 }
 
 .titleCarousel{
@@ -121,7 +122,7 @@ body{
     overflow-y: auto;
 }
 #btnReturnLogin:hover{
-    color: #fff;
+        color: #fff;
     font-weight: 700;
     background: #28df99;
 }
@@ -135,4 +136,9 @@ body{
     background-position: center;
 }
 
-
+/*User header */
+.user-header{
+    background-image: linear-gradient(to right top, #fffdfe, #fcfafb,
+     #f8f6f9, #f4f3f7, #f0f0f5, #eef0f5, #eceff5, #e9eff5, 
+     #e9f2f7, #eaf4f8, #ebf7f9, #edf9f9);
+}

@@ -54,13 +54,13 @@
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                     <span class="d-none d-md-inline">Hola! {{ Auth::user()->name }}</span>
-                    <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+                    <img src="{{asset('img/logo-oficial.png')}}"
                          class="user-image img-circle elevation-2" alt="User Image">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
-                    <li class="user-header bg-primary">
-                        <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+                    <li class="user-header" >
+                        <img src="{{asset('img/logo-oficial.png')}}"
                              class="img-circle elevation-2"
                              alt="User Image">
                         <p>
