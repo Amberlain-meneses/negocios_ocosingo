@@ -40,7 +40,7 @@
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 
                     <div class="carousel-inner">
-                      <div class="carousel-item img-register min-vh-100 active">
+                      <div class="carousel-item img-register min-vh-100 d-none d-sm-none d-md-block  active">
                        
                         <div class="carousel-caption d-none d-md-block">
                        

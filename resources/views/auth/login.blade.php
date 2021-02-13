@@ -41,8 +41,8 @@
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 
                 <div class="carousel-inner">
-                  <div class="carousel-item img-1 min-vh-100 w-100 active">
-                   
+                  <div class="carousel-item d-none d-sm-none d-md-block  active">
+                   <img loading="lazy" class="img-1  min-vh-100 w-100" src="{{asset('img/tienda.jpg')}}" alt="">
                     <div class="carousel-caption d-none d-md-block">
                    
                       <h5 class="titleCarousel">Bienvenido</h5>
