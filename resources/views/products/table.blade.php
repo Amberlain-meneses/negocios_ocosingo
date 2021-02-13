@@ -2,12 +2,12 @@
     <table class="table" id="products-table">
         <thead>
             <tr>
-                <th>Name</th>
-        <th>Price</th>
-        <th>Description</th>
-        <th>Quantity</th>
+                <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Canidad</th>
         <th>Slug</th>
-                <th colspan="3">Action</th>
+                <th colspan="3">Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +27,7 @@
                         <a href="{{ route('products.edit', [$product->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el registro?')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>
