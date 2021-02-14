@@ -5,7 +5,6 @@
                 <th>Nombre</th>
         <th>Precio</th>
         <th>Descripción</th>
-        <th>Canidad</th>
         <th>Slug</th>
                 <th colspan="3">Opciones</th>
             </tr>
@@ -16,7 +15,6 @@
                 <td>{{ $product->name }}</td>
             <td>{{ $product->price }}</td>
             <td>{{ $product->description }}</td>
-            <td>{{ $product->quantity }}</td>
             <td>{{ $product->slug }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['products.destroy', $product->id], 'method' => 'delete']) !!}

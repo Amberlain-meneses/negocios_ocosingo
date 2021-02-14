@@ -16,12 +16,6 @@
     <p>{{ $product->description }}</p>
 </div>
 
-<!-- Quantity Field -->
-<div class="col-sm-12">
-    {!! Form::label('quantity', 'Cantidad:') !!}
-    <p>{{ $product->quantity }}</p>
-</div>
-
 <!-- Slug Field -->
 <div class="col-sm-12">
     {!! Form::label('slug', 'Slug:') !!}
@@ -30,7 +24,7 @@
 
 <!-- Created At Field -->
 <div class="col-sm-12">
-    {!! Form::label('created_at', 'Resgistrado el:') !!}
+    {!! Form::label('created_at', 'Registrado el:') !!}
     <p>{{ $product->created_at }}</p>
 </div>
 

@@ -32,7 +32,7 @@
 <!-- Schedule Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('schedule', 'Horario de atención:') !!}
-    {!! Form::text('schedule', null, ['class' => 'form-control']) !!}
+    {!! Form::time('schedule', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Phone Field -->

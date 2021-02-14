@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $name
  * @property number $price
  * @property string $description
- * @property integer $quantity
  * @property string $slug
  */
 class Product extends Model
@@ -31,7 +30,6 @@ class Product extends Model
         'name',
         'price',
         'description',
-        'quantity',
         'slug'
     ];
 
@@ -45,7 +43,6 @@ class Product extends Model
         'name' => 'string',
         'price' => 'decimal:2',
         'description' => 'string',
-        'quantity' => 'integer',
         'slug' => 'string'
     ];
 
@@ -58,7 +55,6 @@ class Product extends Model
         'name' => 'required',
         'price' => 'required',
         'description' => 'required',
-        'quantity' => 'required',
         'slug' => 'string'
     ];
 

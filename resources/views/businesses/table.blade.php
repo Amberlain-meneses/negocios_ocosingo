@@ -12,7 +12,7 @@
         <th>Categoría</th>
         <th>Referencias</th>
         <th>Proietario</th>
-                <th colspan="3">Action</th>
+                <th colspan="3">Opción</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
                         <a href="{{ route('businesses.edit', [$business->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estás seguro de eliminar?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el registro')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>
