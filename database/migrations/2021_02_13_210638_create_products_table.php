@@ -19,12 +19,11 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->decimal('price');
             $table->string('description');
-            $table->integer('quantity');
             $table->string('slug');
-            $table->unsignedInteger('business_id');
+           // $table->unsignedInteger('business_id');
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('business_id')->references('id')->on('business');
+           // $table->foreign('business_id')->references('id')->on('business');
         });
     }
 

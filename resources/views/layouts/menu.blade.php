@@ -9,7 +9,7 @@
 <li class="nav-item">
     <a href="{{ route('products.index') }}"
        class="nav-link bg-success {{ Request::is('products*') ? 'active' : '' }}">
-        <p>Products</p>
+        <p>Productos</p>
     </a>
 </li>
 
