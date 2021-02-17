@@ -31,13 +31,19 @@
                 <td width="120">
                     {!! Form::open(['route' => ['businesses.destroy', $business->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
+                    @can('businesses.show')
                         <a href="{{ route('businesses.show', [$business->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-eye"></i>
                         </a>
+                        @endcan
+                        @can('businesses.edit')
                         <a href="{{ route('businesses.edit', [$business->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
+                        @endcan
+                        @can('businesses.destroy')
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el registro')"]) !!}
+                        @endcan
                     </div>
                     {!! Form::close() !!}
                 </td>

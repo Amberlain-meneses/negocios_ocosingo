@@ -8,10 +8,12 @@
                     <h1>Negocios Ocosingo</h1>
                 </div>
                 <div class="col-sm-6">
+                    @can('businesses.create')
                     <a class="btn btn-success float-right"
                        href="{{ route('businesses.create') }}">
                         Agregar Nuevo
                     </a>
+                    @endcan
                 </div>
             </div>
         </div>

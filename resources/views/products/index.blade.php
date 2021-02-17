@@ -8,10 +8,12 @@
                     <h1>Productos</h1>
                 </div>
                 <div class="col-sm-6">
+                    @can('products.create')
                     <a class="btn btn-success float-right"
                        href="{{ route('products.create') }}">
                         Registrar Producto
                     </a>
+                    @endcan
                 </div>
             </div>
         </div>
