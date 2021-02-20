@@ -16,6 +16,7 @@ class PermissionTableSeeder extends Seeder
     public function run()
     {
         $permissions_array = [];
+        $permissions_array_read = [];
 
         //permisos para módulo de roles
         array_push($permissions_array, Permission::create(['name' => 'roles.index']));
@@ -44,13 +45,14 @@ class PermissionTableSeeder extends Seeder
         array_push($permissions_array, Permission::create(['name' => 'businesses.show']));
         array_push($permissions_array, Permission::create(['name' => 'businesses.destroy']));
 
+
+
         //se crea rol de superadministrador
         $superAdmin = Role::create(['name' => 'superAdmin']);
-
+       
         //se otorgan los permisos anteriores al rol de superadministrador
         $superAdmin->syncPermissions($permissions_array);
-
-
+       
         //se crea al usuario superadministrador
         $userSuperAdmin = User::create([
             'name' => 'Developer',
@@ -60,6 +62,34 @@ class PermissionTableSeeder extends Seeder
 
         //se asigna el rol al usuario
         $userSuperAdmin->assignRole('superAdmin');
-        
+      
+        //only read for user vited
+
+        array_push($permissions_array_read, 'products.index');
+        array_push($permissions_array_read, 'products.show');
+
+        array_push($permissions_array_read, 'businesses.index');
+        array_push($permissions_array_read, 'businesses.show');
+
+     
+            
+        //se crea rol de superadministrador
+        $userVisited = Role::create(['name' => 'userVisited']);
+       
+        //se otorgan los permisos anteriores al rol de superadministrador
+        $userVisited->syncPermissions($permissions_array_read);
+       
+        //se crea al usuario superadministrador
+        $clientVisited = User::create([
+            'name' => 'Visited',
+            'email' => 'visited@visited.com',
+            'password' => Hash::make('visited@visited.com'),
+        ]);
+
+        //se asigna el rol al usuario
+        $clientVisited->assignRole('userVisited');
+
+
+
     }
 }
