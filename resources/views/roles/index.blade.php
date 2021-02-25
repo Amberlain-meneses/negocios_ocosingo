@@ -8,10 +8,12 @@
                     <h1>Roles</h1>
                 </div>
                 <div class="col-sm-6">
+                    @can('roles.create')
                     <a class="btn btn-success float-right"
                        href="{{ route('roles.create') }}">
                         Crear nuevo rol
                     </a>
+                    @endcan
                 </div>
             </div>
         </div>
