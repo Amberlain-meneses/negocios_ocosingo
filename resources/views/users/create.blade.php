@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Registrar Usuarios</h1>
+                    <h1>Registrar</h1>
                 </div>
             </div>
         </div>
