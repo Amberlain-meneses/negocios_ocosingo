@@ -28,6 +28,7 @@ class PermissionTableSeeder extends Seeder
         //permisos para módulo de usuarios
         array_push($permissions_array, Permission::create(['name' => 'users.index']));
         array_push($permissions_array, Permission::create(['name' => 'users.edit']));
+        array_push($permissions_array, Permission::create(['name' => 'users.create']));
         array_push($permissions_array, Permission::create(['name' => 'users.show']));
         array_push($permissions_array, Permission::create(['name' => 'users.destroy']));
 
@@ -62,12 +63,9 @@ class PermissionTableSeeder extends Seeder
 
         //se asigna el rol al usuario
         $userSuperAdmin->assignRole('superAdmin');
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> 9ca3ab9829dc4b2073b65363b49c38112bbde2d4
-        //only read for user vited
+
+        //usuario visitante
 
         array_push($permissions_array_read, 'products.index');
         array_push($permissions_array_read, 'products.show');
@@ -75,24 +73,15 @@ class PermissionTableSeeder extends Seeder
         array_push($permissions_array_read, 'businesses.index');
         array_push($permissions_array_read, 'businesses.show');
 
-<<<<<<< HEAD
+
         
-        //se crea rol de superadministrador
+        //se crea rol de Usuario visitante
         $userVisited = Role::create(['name' => 'userVisited']);
 
         //se otorgan los permisos anteriores al rol de superadministrador
         $userVisited->syncPermissions($permissions_array_read);
 
-=======
-     
-            
-        //se crea rol de superadministrador
-        $userVisited = Role::create(['name' => 'userVisited']);
-       
-        //se otorgan los permisos anteriores al rol de superadministrador
-        $userVisited->syncPermissions($permissions_array_read);
-       
->>>>>>> 9ca3ab9829dc4b2073b65363b49c38112bbde2d4
+
         //se crea al usuario superadministrador
         $clientVisited = User::create([
             'name' => 'Visited',
