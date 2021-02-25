@@ -45,13 +45,14 @@ class PermissionTableSeeder extends Seeder
         array_push($permissions_array, Permission::create(['name' => 'businesses.show']));
         array_push($permissions_array, Permission::create(['name' => 'businesses.destroy']));
 
+
+
         //se crea rol de superadministrador
         $superAdmin = Role::create(['name' => 'superAdmin']);
-
+       
         //se otorgan los permisos anteriores al rol de superadministrador
         $superAdmin->syncPermissions($permissions_array);
-
-
+       
         //se crea al usuario superadministrador
         $userSuperAdmin = User::create([
             'name' => 'Developer',
@@ -61,7 +62,11 @@ class PermissionTableSeeder extends Seeder
 
         //se asigna el rol al usuario
         $userSuperAdmin->assignRole('superAdmin');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 9ca3ab9829dc4b2073b65363b49c38112bbde2d4
         //only read for user vited
 
         array_push($permissions_array_read, 'products.index');
@@ -70,6 +75,7 @@ class PermissionTableSeeder extends Seeder
         array_push($permissions_array_read, 'businesses.index');
         array_push($permissions_array_read, 'businesses.show');
 
+<<<<<<< HEAD
         
         //se crea rol de superadministrador
         $userVisited = Role::create(['name' => 'userVisited']);
@@ -77,6 +83,16 @@ class PermissionTableSeeder extends Seeder
         //se otorgan los permisos anteriores al rol de superadministrador
         $userVisited->syncPermissions($permissions_array_read);
 
+=======
+     
+            
+        //se crea rol de superadministrador
+        $userVisited = Role::create(['name' => 'userVisited']);
+       
+        //se otorgan los permisos anteriores al rol de superadministrador
+        $userVisited->syncPermissions($permissions_array_read);
+       
+>>>>>>> 9ca3ab9829dc4b2073b65363b49c38112bbde2d4
         //se crea al usuario superadministrador
         $clientVisited = User::create([
             'name' => 'Visited',
@@ -87,6 +103,5 @@ class PermissionTableSeeder extends Seeder
         //se asigna el rol al usuario
         $clientVisited->assignRole('userVisited');
 
-        
     }
 }
