@@ -22,3 +22,11 @@
 </li>
 
 
+<li class="nav-item">
+    <a href="{{ route('roles.index') }}"
+       class="nav-link bg-success {{ Request::is('roles*') ? 'active' : '' }}">
+        <p>Roles</p>
+    </a>
+</li>
+
+

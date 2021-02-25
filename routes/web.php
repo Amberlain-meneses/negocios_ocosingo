@@ -70,3 +70,5 @@ Route::group(['middleware' => ['permission:businesses.destroy']], function () {
 });
 
 Route::resource('users', 'UserController');
+
+Route::resource('roles', 'RoleController');
