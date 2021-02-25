@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Spatie\Permission\Models\Role;
+
 use App\Category;
 use App\TypeService;
 
@@ -27,6 +29,10 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        View::composer(['users.fields'], function ($view) {
+            $roleItems = Role::pluck('name','name')->toArray();
+            $view->with('roleItems', $roleItems);
+        });
         View::composer(['businesses.fields'], function ($view) {
             $categoryItems = Category::pluck('category_name','id')->toArray();
             $view->with('categoryItems', $categoryItems);

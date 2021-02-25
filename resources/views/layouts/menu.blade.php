@@ -14,3 +14,11 @@
 </li>
 
 
+<li class="nav-item">
+    <a href="{{ route('users.index') }}"
+       class="nav-link bg-success {{ Request::is('users*') ? 'active' : '' }}">
+        <p>Users</p>
+    </a>
+</li>
+
+

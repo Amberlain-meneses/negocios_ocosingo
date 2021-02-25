@@ -68,3 +68,5 @@ Route::group(['middleware' => ['permission:businesses.show']], function () {
 Route::group(['middleware' => ['permission:businesses.destroy']], function () {
     Route::delete('businesses/{business}', 'BusinessController@destroy')->name('businesses.destroy');
 });
+
+Route::resource('users', 'UserController');

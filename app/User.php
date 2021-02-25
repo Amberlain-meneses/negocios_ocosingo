@@ -38,4 +38,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //reglas de usuario
+    public static $rules = [
+        'name' => 'required',
+        'email' => 'required|email',
+        'password' => 'required|min:6'
+
+    ];
+
+    //Reglas para modificar usuario sin modificar la contraseña
+    public static $updateRules = [
+        'name' => 'required',
+        'email' => 'required|email',
+ 
+    ];
 }
