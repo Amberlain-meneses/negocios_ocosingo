@@ -15,9 +15,9 @@ class PermissionTableSeeder extends Seeder
      */
     public function run()
     {
+        //superadmin
         $permissions_array = [];
-        $permissions_array_read = [];
-
+       
         //permisos para módulo de roles
         array_push($permissions_array, Permission::create(['name' => 'roles.index']));
         array_push($permissions_array, Permission::create(['name' => 'roles.create']));
@@ -46,7 +46,12 @@ class PermissionTableSeeder extends Seeder
         array_push($permissions_array, Permission::create(['name' => 'businesses.show']));
         array_push($permissions_array, Permission::create(['name' => 'businesses.destroy']));
 
-
+         //permisos para módulo categorías
+         array_push($permissions_array, Permission::create(['name' => 'categories.index']));
+         array_push($permissions_array, Permission::create(['name' => 'categories.create']));
+         array_push($permissions_array, Permission::create(['name' => 'categories.edit']));
+         array_push($permissions_array, Permission::create(['name' => 'categories.show']));
+         array_push($permissions_array, Permission::create(['name' => 'categories.destroy']));
 
         //se crea rol de superadministrador
         $superAdmin = Role::create(['name' => 'superAdmin']);
@@ -65,32 +70,26 @@ class PermissionTableSeeder extends Seeder
         $userSuperAdmin->assignRole('superAdmin');
 
 
-        //usuario visitante
+       
+        //cliente regular
+        $permissions_array_seller = [];
 
-        array_push($permissions_array_read, 'products.index');
-        array_push($permissions_array_read, 'products.show');
+        array_push($permissions_array_seller, 'businesses.create');
+        array_push($permissions_array_seller, 'businesses.edit');
+        array_push($permissions_array_seller, 'businesses.show');
 
-        array_push($permissions_array_read, 'businesses.index');
-        array_push($permissions_array_read, 'businesses.show');
+        array_push($permissions_array_seller, 'products.index');
+        array_push($permissions_array_seller, 'products.create');
+        array_push($permissions_array_seller, 'products.edit');
+        array_push($permissions_array_seller, 'products.show');
+        array_push($permissions_array_seller, 'products.destroy');
 
+        array_push($permissions_array_seller, 'categories.create');
 
-        
-        //se crea rol de Usuario visitante
-        $userVisited = Role::create(['name' => 'userVisited']);
+        //se crea rol de vendedor
+        $userSeller = Role::create(['name' => 'seller']);
 
-        //se otorgan los permisos anteriores al rol de superadministrador
-        $userVisited->syncPermissions($permissions_array_read);
-
-
-        //se crea al usuario superadministrador
-        $clientVisited = User::create([
-            'name' => 'Visited',
-            'email' => 'visited@visited.com',
-            'password' => Hash::make('visited@visited.com'),
-        ]);
-
-        //se asigna el rol al usuario
-        $clientVisited->assignRole('userVisited');
-
+        //se otorgan los permisos anteriores al rol de
+        $userSeller->syncPermissions($permissions_array_seller);
     }
 }

@@ -21,6 +21,57 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//Rutas para usuarios
+Route::group(['middleware' => ['permission:users.index']], function () {
+    Route::get('users', 'UserController@index')->name('users.index');
+});
+
+Route::group(['middleware' => ['permission:users.create']], function () {
+    Route::get('users/create', 'UserController@create')->name('users.create');
+    Route::post('users/store', 'UserController@store')->name('users.store');
+});
+
+Route::group(['middleware' => ['permission:users.edit']], function () {
+    Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit');
+    Route::patch('users/{user}', 'UserController@update')->name('users.update');
+});
+
+Route::group(['middleware' => ['permission:users.show']], function () {
+    Route::get('users/{user}', 'UserController@show')->name('users.show');
+});
+
+Route::group(['middleware' => ['permission:users.destroy']], function () {
+    Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
+});
+
+
+
+//Rutas para roles
+Route::group(['middleware' => ['permission:roles.index']], function () {
+    Route::get('roles', 'RoleController@index')->name('roles.index');
+});
+
+Route::group(['middleware' => ['permission:roles.create']], function () {
+    Route::get('roles/create', 'RoleController@create')->name('roles.create');
+    Route::post('roles/store', 'RoleController@store')->name('roles.store');
+});
+
+Route::group(['middleware' => ['permission:roles.edit']], function () {
+    Route::get('roles/{role}/edit', 'RoleController@edit')->name('roles.edit');
+    Route::patch('roles/{role}', 'RoleController@update')->name('roles.update');
+});
+
+Route::group(['middleware' => ['permission:roles.show']], function () {
+    Route::get('roles/{role}', 'RoleController@show')->name('roles.show');
+});
+
+Route::group(['middleware' => ['permission:roles.destroy']], function () {
+    Route::delete('roles/{role}', 'RoleController@destroy')->name('roles.destroy');
+});
+
+
+
 //Rutas para productos
 Route::group(['middleware' => ['permission:products.index']], function () {
     Route::get('products', 'ProductController@index')->name('products.index');
@@ -69,55 +120,27 @@ Route::group(['middleware' => ['permission:businesses.destroy']], function () {
     Route::delete('businesses/{business}', 'BusinessController@destroy')->name('businesses.destroy');
 });
 
-//Rutas para usuarios
-Route::group(['middleware' => ['permission:users.index']], function () {
-    Route::get('users', 'UserController@index')->name('users.index');
+
+
+//Rutas para categorías
+Route::group(['middleware' => ['permission:categories.index']], function () {
+    Route::get('categories', 'CategoryController@index')->name('categories.index');
 });
 
-Route::group(['middleware' => ['permission:users.create']], function () {
-    Route::get('users/create', 'UserController@create')->name('users.create');
-    Route::post('users/store', 'UserController@store')->name('users.store');
+Route::group(['middleware' => ['permission:categories.create']], function () {
+    Route::get('categories/create', 'CategoryController@create')->name('categories.create');
+    Route::post('categories/store', 'CategoryController@store')->name('categories.store');
 });
 
-Route::group(['middleware' => ['permission:users.edit']], function () {
-    Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit');
-    Route::patch('users/{user}', 'UserController@update')->name('users.update');
+Route::group(['middleware' => ['permission:categories.edit']], function () {
+    Route::get('categories/{category}/edit', 'CategoryController@edit')->name('categories.edit');
+    Route::patch('categories/{category}', 'CategoryController@update')->name('categories.update');
 });
 
-Route::group(['middleware' => ['permission:users.show']], function () {
-    Route::get('users/{user}', 'UserController@show')->name('users.show');
+Route::group(['middleware' => ['permission:categories.show']], function () {
+    Route::get('categories/{category}', 'CategoryController@show')->name('categories.show');
 });
 
-Route::group(['middleware' => ['permission:users.destroy']], function () {
-    Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
+Route::group(['middleware' => ['permission:categories.destroy']], function () {
+    Route::delete('categories/{category}', 'CategoryController@destroy')->name('categories.destroy');
 });
-
-//Rutas para roles
-Route::group(['middleware' => ['permission:roles.index']], function () {
-    Route::get('roles', 'RoleController@index')->name('roles.index');
-});
-
-Route::group(['middleware' => ['permission:roles.create']], function () {
-    Route::get('roles/create', 'RoleController@create')->name('roles.create');
-    Route::post('roles/store', 'RoleController@store')->name('roles.store');
-});
-
-Route::group(['middleware' => ['permission:roles.edit']], function () {
-    Route::get('roles/{role}/edit', 'RoleController@edit')->name('roles.edit');
-    Route::patch('roles/{role}', 'RoleController@update')->name('roles.update');
-});
-
-Route::group(['middleware' => ['permission:roles.show']], function () {
-    Route::get('roles/{role}', 'RoleController@show')->name('roles.show');
-});
-
-Route::group(['middleware' => ['permission:roles.destroy']], function () {
-    Route::delete('roles/{role}', 'RoleController@destroy')->name('roles.destroy');
-});
-
-
-
-
-
-
-Route::resource('categories', 'CategoryController');
