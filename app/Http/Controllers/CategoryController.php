@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateCategoryRequest;
 use App\Repositories\CategoryRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Flash;
 use Response;
 
@@ -55,7 +56,7 @@ class CategoryController extends AppBaseController
     public function store(CreateCategoryRequest $request)
     {
         $input = $request->all();
-
+        $input['is_verified'] = $this->isVerified();
         $category = $this->categoryRepository->create($input);
 
         Flash::success('Category saved successfully.');
@@ -154,4 +155,8 @@ class CategoryController extends AppBaseController
         return redirect(route('categories.index'));
     }
 
+    public function isVerified(){
+       Auth::user()->hasRole('superAdmin') ? $is_verified = 1 : $is_verified = 0;
+       return $is_verified;
+    }
 }

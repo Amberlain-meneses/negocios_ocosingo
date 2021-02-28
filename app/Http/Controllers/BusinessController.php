@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateBusinessRequest;
 use App\Repositories\BusinessRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Flash;
 use Response;
 
@@ -58,8 +59,8 @@ class BusinessController extends AppBaseController
         $input = $request->all();
         //se sube la imagen
         $input['image'] =  $this->uploadImage($request);
+        $input['is_verified'] = $this->isVerified();
 
-        //dd($input);
         $business = $this->businessRepository->create($input);
 
         Flash::success('Business saved successfully.');
@@ -174,4 +175,10 @@ class BusinessController extends AppBaseController
             return $image;
         }
     }
+
+
+    public function isVerified(){
+        Auth::user()->hasRole('superAdmin') ? $is_verified = 1 : $is_verified = 0;
+        return $is_verified;
+     }
 }
