@@ -27,7 +27,6 @@
             <td>{{ $business->service->service_type}}</td>
             <td>{{ $business->category->category_name }}</td>
             <td>{{ $business->references }}</td>
-            <td>{{ $business->owner }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['businesses.destroy', $business->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

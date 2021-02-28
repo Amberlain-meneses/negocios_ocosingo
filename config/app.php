@@ -179,6 +179,9 @@ return [
         //Provider de Spatie para roles y permisos
         Spatie\Permission\PermissionServiceProvider::class,
 
+        //Provider de debug bar
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
@@ -233,6 +236,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

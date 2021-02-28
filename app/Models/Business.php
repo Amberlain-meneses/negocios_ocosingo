@@ -6,6 +6,7 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Category;
 use App\TypeService;
+use App\User;
 
 /**
  * Class Business
@@ -21,7 +22,6 @@ use App\TypeService;
  * @property integer $service_id
  * @property integer $category_id
  * @property string $references
- * @property string $owner
  */
 class Business extends Model
 {
@@ -44,7 +44,7 @@ class Business extends Model
         'service_id',
         'category_id',
         'references',
-        'owner'
+        'is_verified'
     ];
 
     /**
@@ -63,7 +63,7 @@ class Business extends Model
         'service_id' => 'integer',
         'category_id' => 'integer',
         'references' => 'string',
-        'owner' => 'string'
+        'is_verified' => 'integer'
     ];
 
     /**
@@ -80,8 +80,8 @@ class Business extends Model
         'phone' => 'max:10|min:10',
         'service_id' => 'required',
         'category_id' => 'required',
-        'references' => 'required',
-        'owner' => 'required'
+        'references' => 'required'
+        
     ];
 
     public function category(){

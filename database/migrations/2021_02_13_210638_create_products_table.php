@@ -20,10 +20,10 @@ class CreateProductsTable extends Migration
             $table->decimal('price');
             $table->string('description');
             $table->string('slug');
-           // $table->unsignedInteger('business_id');
+            $table->unsignedInteger('business_id');
             $table->timestamps();
             $table->softDeletes();
-           // $table->foreign('business_id')->references('id')->on('business');
+            $table->foreign('business_id')->references('id')->on('business');
         });
     }
 

@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Category;
+use App\Models\Business;
+use App\Observers\BusinessObserver;
+use App\Observers\CategoryObserver;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -25,5 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        Category::observe(CategoryObserver::class);
+        Business::observe(BusinessObserver::class);
     }
 }

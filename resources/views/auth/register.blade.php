@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }} | Registration Page</title>
+    <title>{{ config('app.name') }} | Registro</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -61,7 +61,7 @@
                 <!---Form--->
                 <div class="px-lg-5 py-lg-4 p-4">
                     <div class="input-group justify-content-center">
-                        <h2 class="titleFormRegistrer ">Registrar Administrador</h2>
+                        <h2 class="titleFormRegistrer ">Registrar</h2>
                         <h1 class="tileNegocios mb-4">Negocios Ocosingo</h1>
                     </div>
 
@@ -95,8 +95,22 @@
                             <span class="error invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text"
+                                   name="phone"
+                                   value="{{ old('phone') }}"
+                                   class="form-control @error('phone') is-invalid @enderror"
+                                   placeholder="Teléfono (opcional)">
+                            <div class="input-group-append">
+                                <div class="input-group-text"><span class="fas fa-phone"></span></div>
+                            </div>
+                            @error('phone')
+                            <span class="error invalid-feedback">{{ $message }}</span>
+                            @enderror
+                        </div>
         
-                        <div class="input-group mb-4">
+                        <div class="input-group mb-3">
                             <input type="password"
                                    name="password"
                                    class="form-control @error('password') is-invalid @enderror"
@@ -109,7 +123,7 @@
                             @enderror
                         </div>
         
-                        <div class="input-group mb-4">
+                        <div class="input-group mb-3">
                             <input type="password"
                                    name="password_confirmation"
                                    class="form-control"

@@ -69,58 +69,48 @@ Route::group(['middleware' => ['permission:businesses.destroy']], function () {
     Route::delete('businesses/{business}', 'BusinessController@destroy')->name('businesses.destroy');
 });
 
-//rutas para usuarios
-//index de usuario
+//Rutas para usuarios
 Route::group(['middleware' => ['permission:users.index']], function () {
     Route::get('users', 'UserController@index')->name('users.index');
 });
 
-//Crear usuario
 Route::group(['middleware' => ['permission:users.create']], function () {
     Route::get('users/create', 'UserController@create')->name('users.create');
     Route::post('users/store', 'UserController@store')->name('users.store');
 });
 
-//editar usuario
 Route::group(['middleware' => ['permission:users.edit']], function () {
     Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit');
     Route::patch('users/{user}', 'UserController@update')->name('users.update');
 });
 
-//tabla de usuarios para ver
 Route::group(['middleware' => ['permission:users.show']], function () {
     Route::get('users/{user}', 'UserController@show')->name('users.show');
 });
 
-//eliminar
 Route::group(['middleware' => ['permission:users.destroy']], function () {
     Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
 });
 
-//rutas para roles
-//index de roles
+//Rutas para roles
 Route::group(['middleware' => ['permission:roles.index']], function () {
     Route::get('roles', 'RoleController@index')->name('roles.index');
 });
 
-//Crear rol
 Route::group(['middleware' => ['permission:roles.create']], function () {
     Route::get('roles/create', 'RoleController@create')->name('roles.create');
     Route::post('roles/store', 'RoleController@store')->name('roles.store');
 });
 
-//editar rol
 Route::group(['middleware' => ['permission:roles.edit']], function () {
     Route::get('roles/{role}/edit', 'RoleController@edit')->name('roles.edit');
     Route::patch('roles/{role}', 'RoleController@update')->name('roles.update');
 });
 
-//tabla de rol para ver
 Route::group(['middleware' => ['permission:roles.show']], function () {
     Route::get('roles/{role}', 'RoleController@show')->name('roles.show');
 });
 
-//eliminar rol 
 Route::group(['middleware' => ['permission:roles.destroy']], function () {
     Route::delete('roles/{role}', 'RoleController@destroy')->name('roles.destroy');
 });
@@ -128,3 +118,6 @@ Route::group(['middleware' => ['permission:roles.destroy']], function () {
 
 
 
+
+
+Route::resource('categories', 'CategoryController');

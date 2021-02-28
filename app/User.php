@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone',
     ];
 
     /**
@@ -39,18 +39,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //reglas de usuario
+    //Reglas de usuario
     public static $rules = [
         'name' => 'required',
         'email' => 'required|email',
-        'password' => 'required|min:6'
-
+        'password' => 'required|min:6',
+        'phone' => 'min:10|max:10|nullable',
     ];
 
     //Reglas para modificar usuario sin modificar la contraseña
     public static $updateRules = [
         'name' => 'required',
         'email' => 'required|email',
- 
+        'phone' => 'min:10|max:10|nullable',
     ];
 }

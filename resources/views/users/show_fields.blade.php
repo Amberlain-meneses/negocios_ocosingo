@@ -10,6 +10,11 @@
     <p>{{ $user->email }}</p>
 </div>
 
+<!-- Phone Field -->
+<div class="col-sm-12">
+    {!! Form::label('phone', 'Teléfono:') !!}
+    <p>{{ $user->phone }}</p>
+</div>
 
 <!-- Role Field -->
 <div class="col-sm-12">

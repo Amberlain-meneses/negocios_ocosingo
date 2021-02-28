@@ -15,27 +15,35 @@ class ServicesCategoriesTableSeeder extends Seeder
     {
         Category::create([
             'category_name' => 'Taquería',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Pastelería',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Tienda de ropa',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Panadería',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Bar',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Restaurante',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Pizzería',
+            'is_verified' => '1',
         ]);
         Category::create([
             'category_name' => 'Cafetería',
+            'is_verified' => '1',
         ]);
 
         TypeService::create([

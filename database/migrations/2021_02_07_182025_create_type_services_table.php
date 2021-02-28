@@ -17,6 +17,7 @@ class CreateTypeServicesTable extends Migration
             $table->id();
             $table->string('service_type');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

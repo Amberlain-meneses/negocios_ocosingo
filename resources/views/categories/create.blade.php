@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Editar datos de Negocio</h1>
+                    <h1>Create Category</h1>
                 </div>
             </div>
         </div>
@@ -17,20 +17,22 @@
 
         <div class="card">
 
-            {!! Form::model($business, ['route' => ['businesses.update', $business->id], 'method' => 'patch']) !!}
+            {!! Form::open(['route' => 'categories.store']) !!}
 
             <div class="card-body">
+
                 <div class="row">
-                    @include('businesses.fields')
+                    @include('categories.fields')
                 </div>
+
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
-                <a href="{{ route('businesses.index') }}" class="btn btn-outline-success">Cancelar</a>
+                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                <a href="{{ route('categories.index') }}" class="btn btn-default">Cancel</a>
             </div>
 
-           {!! Form::close() !!}
+            {!! Form::close() !!}
 
         </div>
     </div>

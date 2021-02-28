@@ -24,14 +24,14 @@ class CreateBusinessesTable extends Migration
             $table->string('phone');
             $table->unsignedBigInteger('service_id');
             $table->unsignedBigInteger('category_id');
-           // $table->unsignedBigInteger('user_id');
+           // $table->unsignedBigInteger('user_id')->nullable();
             $table->string('references');
-            $table->string('owner');
+            $table->integer('is_verified')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('service_id')->references('id')->on('type_services');
             $table->foreign('category_id')->references('id')->on('categories');
-            // $table->foreign('user_id')->references('id')->on('users');
+            //$table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -52,12 +52,6 @@
     <p>{{ $business->references }}</p>
 </div>
 
-<!-- Owner Field -->
-<div class="col-sm-12">
-    {!! Form::label('owner', 'Propietario:') !!}
-    <p>{{ $business->owner }}</p>
-</div>
-
 <!-- Created At Field -->
 <div class="col-sm-12">
     {!! Form::label('created_at', 'Registrado el:') !!}

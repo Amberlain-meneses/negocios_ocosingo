@@ -4,6 +4,7 @@
             <tr>
                 <th>Nombre</th>
         <th>Email</th>
+        <th>Teléfono</th>
         <th>Rol</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -13,6 +14,7 @@
             <tr>
                 <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
+            <td>{{ $user->phone }}</td>
             <td>{{ implode(" ",$user->getRoleNames()->toArray())}}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}

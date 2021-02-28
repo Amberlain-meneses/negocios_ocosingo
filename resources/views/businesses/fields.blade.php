@@ -6,7 +6,7 @@
 
 <!-- Image Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('image', 'Foto de Negocio:') !!}
+    {!! Form::label('image', 'Foto de portada:') !!}
     <div class="input-group">
         <div class="custom-file">
             {!! Form::file('image', ['class' => 'custom-file-input']) !!}
@@ -59,10 +59,4 @@
 <div class="form-group col-sm-6">
     {!! Form::label('references', 'Referencias:') !!}
     {!! Form::text('references', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Owner Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('owner', 'Propietario:') !!}
-    {!! Form::text('owner', null, ['class' => 'form-control']) !!}
 </div>

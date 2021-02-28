@@ -30,7 +30,8 @@ class Product extends Model
         'name',
         'price',
         'description',
-        'slug'
+        'slug',
+        'business_id'
     ];
 
     /**
@@ -43,7 +44,8 @@ class Product extends Model
         'name' => 'string',
         'price' => 'decimal:2',
         'description' => 'string',
-        'slug' => 'string'
+        'slug' => 'string',
+        'business_id' => 'integer'
     ];
 
     /**

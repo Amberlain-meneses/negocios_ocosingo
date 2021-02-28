@@ -7,7 +7,6 @@ use App\Http\Requests\UpdateBusinessRequest;
 use App\Repositories\BusinessRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use App\Models\Business;
 use Flash;
 use Response;
 
@@ -57,11 +56,14 @@ class BusinessController extends AppBaseController
     public function store(CreateBusinessRequest $request)
     {
         $input = $request->all();
+        //se sube la imagen
+        $input['image'] =  $this->uploadImage($request);
 
+        //dd($input);
         $business = $this->businessRepository->create($input);
 
         Flash::success('Business saved successfully.');
-
+        
         return redirect(route('businesses.index'));
     }
 
@@ -154,5 +156,22 @@ class BusinessController extends AppBaseController
         Flash::success('Business deleted successfully.');
 
         return redirect(route('businesses.index'));
+    }
+
+    /**
+     * Se encargan de subir la imagen principal
+     * y retorna el nombre de ese archivo
+     * @param  Request  $request
+     * @return $image
+     */
+
+    public function uploadImage($request)
+    {
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $image  = $file->getClientOriginalName();
+            $file->move(public_path("images/"), $image);
+            return $image;
+        }
     }
 }
