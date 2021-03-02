@@ -59,7 +59,7 @@ class CategoryController extends AppBaseController
         $input['is_verified'] = $this->isVerified();
         $category = $this->categoryRepository->create($input);
 
-        Flash::success('Category saved successfully.');
+        Flash::success('Categoría guardada correctamente');
 
         return redirect(route('categories.index'));
     }
@@ -76,7 +76,7 @@ class CategoryController extends AppBaseController
         $category = $this->categoryRepository->find($id);
 
         if (empty($category)) {
-            Flash::error('Category not found');
+            Flash::error('Categoría no encontrada');
 
             return redirect(route('categories.index'));
         }
@@ -96,7 +96,7 @@ class CategoryController extends AppBaseController
         $category = $this->categoryRepository->find($id);
 
         if (empty($category)) {
-            Flash::error('Category not found');
+            Flash::error('Categoría no encontrada');
 
             return redirect(route('categories.index'));
         }
@@ -117,14 +117,14 @@ class CategoryController extends AppBaseController
         $category = $this->categoryRepository->find($id);
 
         if (empty($category)) {
-            Flash::error('Category not found');
+            Flash::error('Categoría no encontrada');
 
             return redirect(route('categories.index'));
         }
 
         $category = $this->categoryRepository->update($request->all(), $id);
 
-        Flash::success('Category updated successfully.');
+        Flash::success('Categoría actualizada correctamente');
 
         return redirect(route('categories.index'));
     }
@@ -143,14 +143,14 @@ class CategoryController extends AppBaseController
         $category = $this->categoryRepository->find($id);
 
         if (empty($category)) {
-            Flash::error('Category not found');
+            Flash::error('Categoría no encontrada');
 
             return redirect(route('categories.index'));
         }
 
         $this->categoryRepository->delete($id);
 
-        Flash::success('Category deleted successfully.');
+        Flash::success('Categoría eliminada correctamente');
 
         return redirect(route('categories.index'));
     }

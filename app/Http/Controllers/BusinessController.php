@@ -63,7 +63,7 @@ class BusinessController extends AppBaseController
 
         $business = $this->businessRepository->create($input);
 
-        Flash::success('Business saved successfully.');
+        Flash::success('Negocio agregado correctamente');
         
         return redirect(route('businesses.index'));
     }
@@ -80,7 +80,7 @@ class BusinessController extends AppBaseController
         $business = $this->businessRepository->find($id);
 
         if (empty($business)) {
-            Flash::error('Business not found');
+            Flash::error('Negocio no encontrado');
 
             return redirect(route('businesses.index'));
         }
@@ -100,7 +100,7 @@ class BusinessController extends AppBaseController
         $business = $this->businessRepository->find($id);
 
         if (empty($business)) {
-            Flash::error('Business not found');
+            Flash::error('Negocio no encontrado');
 
             return redirect(route('businesses.index'));
         }
@@ -121,14 +121,14 @@ class BusinessController extends AppBaseController
         $business = $this->businessRepository->find($id);
 
         if (empty($business)) {
-            Flash::error('Business not found');
+            Flash::error('Negocio no encontrado');
 
             return redirect(route('businesses.index'));
         }
 
         $business = $this->businessRepository->update($request->all(), $id);
 
-        Flash::success('Business updated successfully.');
+        Flash::success('Negocio actualizado correctamente');
 
         return redirect(route('businesses.index'));
     }
@@ -147,14 +147,14 @@ class BusinessController extends AppBaseController
         $business = $this->businessRepository->find($id);
 
         if (empty($business)) {
-            Flash::error('Business not found');
+            Flash::error('Negocio no encontrado');
 
             return redirect(route('businesses.index'));
         }
 
         $this->businessRepository->delete($id);
 
-        Flash::success('Business deleted successfully.');
+        Flash::success('Negocio eliminado correctamente');
 
         return redirect(route('businesses.index'));
     }
