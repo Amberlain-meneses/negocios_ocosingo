@@ -14,7 +14,10 @@ class UserObserver
      */
     public function created(User $user)
     {
-        $user->assignRole('seller');
+        if(isset($user)){
+            $user->assignRole('seller');
+        }
+       
     }
 
     /**

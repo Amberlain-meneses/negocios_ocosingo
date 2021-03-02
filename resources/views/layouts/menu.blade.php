@@ -18,7 +18,7 @@
 <li class="nav-item">
     <a href="{{ route('users.index') }}"
        class="nav-link bg-success {{ Request::is('users*') ? 'active' : '' }}">
-        <p>Users</p>
+        <p>Usuarios</p>
     </a>
 </li>
 @endcan
@@ -33,8 +33,8 @@
 
 <li class="nav-item">
     <a href="{{ route('categories.index') }}"
-       class="nav-link {{ Request::is('categories*') ? 'active' : '' }}">
-        <p>Categories</p>
+       class="nav-link bg-success {{ Request::is('categories*') ? 'active' : '' }}">
+        <p>Categorías</p>
     </a>
 </li>
 

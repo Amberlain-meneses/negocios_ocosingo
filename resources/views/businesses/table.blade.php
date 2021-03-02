@@ -11,7 +11,7 @@
         <th>Tipo de servicio</th>
         <th>Categoría</th>
         <th>Referencias</th>
-        <th>Proietario</th>
+        <!--<th>Proietario</th>-->
                 <th colspan="3">Opción</th>
             </tr>
         </thead>
@@ -19,14 +19,15 @@
         @foreach($businesses as $business)
             <tr>
                 <td>{{ $business->name }}</td>
-            <td>{{ $business->image }}</td>
-            <td>{{ $business->adress }}</td>
-            <td>{{ $business->location }}</td>
-            <td>{{ $business->schedule }}</td>
-            <td>{{ $business->phone }}</td>
-            <td>{{ $business->service->service_type}}</td>
-            <td>{{ $business->category->category_name }}</td>
-            <td>{{ $business->references }}</td>
+                <td><img class="rounded" src="images/{{ $business->image }}" width="50" alt=""></td>
+                <td>{{ $business->adress }}</td>
+                <td>{{ $business->location }}</td>
+                <td>{{ $business->schedule }}</td>
+                <td>{{ $business->phone }}</td>
+                <td>{{ $business->service->service_type}}</td>
+                <td>{{ $business->category->category_name }}</td>
+                <td>{{ $business->references }}</td>
+            
                 <td width="120">
                     {!! Form::open(['route' => ['businesses.destroy', $business->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

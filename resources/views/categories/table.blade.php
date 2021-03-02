@@ -2,7 +2,7 @@
     <table class="table" id="categories-table">
         <thead>
             <tr>
-                <th>Category Name</th>
+                <th>Categorías</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
