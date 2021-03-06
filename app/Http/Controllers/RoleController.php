@@ -59,7 +59,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->create($input);
         unset($input['permissions']);
         $role->syncPermissions($request->permissions);
-        Flash::success('Role saved successfully.');
+        Flash::success('Rol guardado con éxito');
 
         return redirect(route('roles.index'));
     }
@@ -76,7 +76,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->find($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rol no encontrado');
 
             return redirect(route('roles.index'));
         }
@@ -96,7 +96,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->find($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rol no encontrado');
 
             return redirect(route('roles.index'));
         }
@@ -117,7 +117,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->find($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rol no encontrado');
 
             return redirect(route('roles.index'));
         }
@@ -126,7 +126,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->update($input, $id);
         $role->permissions()->detach();//eliminaos antes la relaciones anteriores
         $role->syncPermissions($request->permissions);//asignamor el nuevo
-        Flash::success('Role updated successfully.');
+        Flash::success('Rol actualizado correctamente');
 
         return redirect(route('roles.index'));
     }
@@ -145,14 +145,14 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->find($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rol no encontrado');
 
             return redirect(route('roles.index'));
         }
 
         $this->roleRepository->delete($id);
 
-        Flash::success('Role deleted successfully.');
+        Flash::success('Rol eliminado correctamente');
 
         return redirect(route('roles.index'));
     }
