@@ -30,12 +30,12 @@
     </a>
 </li>
 @endcan
-
+@can('categories.index')
 <li class="nav-item">
     <a href="{{ route('categories.index') }}"
        class="nav-link bg-success {{ Request::is('categories*') ? 'active' : '' }}">
         <p>Categorías</p>
     </a>
 </li>
-
+@endcan
 

@@ -22,6 +22,12 @@
     {!! Form::password('password', ['class' => 'form-control','minlength' => 6]) !!}
 </div>
 
+<!-- Url Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('default_url', 'URL para usuario:') !!}
+    {!! Form::password('default_url', ['class' => 'form-control']) !!}
+</div>
+
 <!-- Role Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('role', 'Rol:') !!}

@@ -6,6 +6,7 @@ use App\Http\Requests\CreateProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Repositories\ProductRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Flash;
 use Response;

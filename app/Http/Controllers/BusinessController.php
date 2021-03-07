@@ -65,8 +65,8 @@ class BusinessController extends AppBaseController
 
         Flash::success('Negocio agregado correctamente');
         
-        return redirect(route('businesses.index'));
-    }
+        return redirect(Auth::user()->default_url);
+    }   
 
     /**
      * Display the specified Business.

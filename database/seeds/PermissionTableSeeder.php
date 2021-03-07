@@ -63,6 +63,7 @@ class PermissionTableSeeder extends Seeder
         $userSuperAdmin = User::create([
             'name' => 'Developer',
             'email' => 'dev@dev.com',
+            'default_url' => '/home',
             'password' => Hash::make('dev@dev.com'),
         ]);
 

@@ -28,7 +28,7 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
+                {!! Form::submit('Guardar', ['class' => 'btn btn-success', 'id' => 'save_business']) !!}
                 <a href="{{ route('businesses.index') }}" class="btn btn-outline-success">Cancelar</a>
             </div>
 

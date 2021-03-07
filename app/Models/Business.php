@@ -44,7 +44,8 @@ class Business extends Model
         'service_id',
         'category_id',
         'references',
-        'is_verified'
+        'is_verified',
+        'user_id',
     ];
 
     /**
@@ -80,8 +81,8 @@ class Business extends Model
         'phone' => 'max:10|min:10',
         'service_id' => 'required',
         'category_id' => 'required',
-        'references' => 'required'
-        
+        'references' => 'required',
+        'user_id' => 'required',
     ];
 
     public function category(){

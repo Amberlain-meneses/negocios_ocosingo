@@ -14,10 +14,9 @@ class UserObserver
      */
     public function created(User $user)
     {
-        if(isset($user)){
-            $user->assignRole('seller');
-        }
-       
+        $user->default_url = '/products';
+        $user->save();
+        $user->assignRole('seller');
     }
 
     /**

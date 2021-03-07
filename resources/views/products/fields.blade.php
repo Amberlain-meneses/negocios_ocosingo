@@ -1,3 +1,5 @@
+<input id="business_id" name="business_id" type="hidden" value="{{Auth::user()->business->id}}">
+
 <!-- Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('name', 'Nombre:') !!}
@@ -19,5 +21,5 @@
 <!-- Slug Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('slug', 'Slug:') !!}
-    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
+    {!! Form::text('slug', null, ['class' => 'form-control', 'readonly']) !!}
 </div>

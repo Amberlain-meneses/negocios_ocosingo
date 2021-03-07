@@ -2,25 +2,25 @@
 
 namespace App;
 
+use App\Models\Business;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use HasRoles;
-
-   
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone',
+        'name', 'email', 'password', 'phone', 'default_url',
     ];
 
     /**
@@ -55,4 +55,12 @@ class User extends Authenticatable
         'email' => 'required|email',
         'phone' => 'min:10|max:10|nullable',
     ];
+
+    //Comienzan las relaciones
+    public function business(){
+        
+        return $this->hasOne(Business::class);
+    }
+    //Fín relaciones
+
 }

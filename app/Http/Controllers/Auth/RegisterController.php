@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -25,12 +26,16 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
+   * Where to redirect users after login.
+   * Método customizado
+   *
+   * @var string
+   */
+  public function redirectTo()
+  {
+    $url = Auth::user()->default_url;
+    return $url;
+  }
     /**
      * Create a new controller instance.
      *
