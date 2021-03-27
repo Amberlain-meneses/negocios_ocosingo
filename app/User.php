@@ -61,6 +61,7 @@ class User extends Authenticatable
         
         return $this->hasOne(Business::class);
     }
+
     //Fín relaciones
 
 }

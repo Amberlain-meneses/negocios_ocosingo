@@ -56,7 +56,8 @@ class ProductController extends AppBaseController
     public function store(CreateProductRequest $request)
     {
         $input = $request->all();
-
+        //se sube la imagen
+        $input['image'] =  $this->uploadImage($request);
         $product = $this->productRepository->create($input);
 
         Flash::success('Producto guardado correctamente');
@@ -153,5 +154,22 @@ class ProductController extends AppBaseController
         Flash::success('Producto eliminado correctamente');
 
         return redirect(route('products.index'));
+    }
+
+     /**
+     * Se encargan de subir la imagen principal
+     * y retorna el nombre de ese archivo
+     * @param  Request  $request
+     * @return $image
+     */
+
+    public function uploadImage($request)
+    {
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $image  = $file->getClientOriginalName();
+            $file->move(public_path("images/"), $image);
+            return $image;
+        }
     }
 }

@@ -57,6 +57,8 @@ class CategoryController extends AppBaseController
     public function store(CreateCategoryRequest $request)
     {
         $input = $request->all();
+        //se sube la imagen
+        $input['image'] =  $this->uploadImage($request);
         $input['is_verified'] = $this->isVerified();
         $category = $this->categoryRepository->create($input);
 
@@ -159,5 +161,22 @@ class CategoryController extends AppBaseController
     public function isVerified(){
        Auth::user()->hasRole('superAdmin') ? $is_verified = 1 : $is_verified = 0;
        return $is_verified;
+    }
+
+    /**
+     * Se encargan de subir la imagen principal
+     * y retorna el nombre de ese archivo
+     * @param  Request  $request
+     * @return $image
+     */
+
+    public function uploadImage($request)
+    {
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $image  = $file->getClientOriginalName();
+            $file->move(public_path("images/"), $image);
+            return $image;
+        }
     }
 }

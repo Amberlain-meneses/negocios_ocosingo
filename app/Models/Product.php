@@ -31,7 +31,8 @@ class Product extends Model
         'price',
         'description',
         'slug',
-        'business_id'
+        'business_id',
+        'image'
     ];
 
     /**
@@ -45,7 +46,8 @@ class Product extends Model
         'price' => 'decimal:2',
         'description' => 'string',
         'slug' => 'string',
-        'business_id' => 'integer'
+        'business_id' => 'integer',
+        'image' => 'string'
     ];
 
     /**
@@ -57,7 +59,8 @@ class Product extends Model
         'name' => 'required',
         'price' => 'required',
         'description' => 'required',
-        'slug' => 'string'
+        'slug' => 'string',
+        'image' => 'required'
     ];
 
     

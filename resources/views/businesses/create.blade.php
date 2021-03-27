@@ -19,8 +19,9 @@
 
             {!! Form::open(['route' => 'businesses.store', 'enctype'=> 'multipart/form-data']) !!}
 
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+            
             <div class="card-body">
-
                 <div class="row">
                     @include('businesses.fields')
                 </div>

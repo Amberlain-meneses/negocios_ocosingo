@@ -3,6 +3,7 @@
         <thead>
             <tr>
                 <th>Nombre</th>
+                <th>Imagen</th>
         <th>Precio</th>
         <th>Descripción</th>
         <th>Slug</th>
@@ -13,9 +14,11 @@
         @foreach($products as $product)
             <tr>
                 <td>{{ $product->name }}</td>
+                <td><img class="rounded" src="images/{{ $product->image }}" width="50" alt=""></td>
             <td>{{ $product->price }}</td>
             <td>{{ $product->description }}</td>
             <td>{{ $product->slug }}</td>
+            category
                 <td width="120">
                     {!! Form::open(['route' => ['products.destroy', $product->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

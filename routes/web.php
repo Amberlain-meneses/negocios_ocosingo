@@ -145,3 +145,8 @@ Route::group(['middleware' => ['permission:categories.show']], function () {
 Route::group(['middleware' => ['permission:categories.destroy']], function () {
     Route::delete('categories/{category}', 'CategoryController@destroy')->name('categories.destroy');
 });
+
+
+
+//Envía mail al admin para registro de categorías
+Route::post('/request-category-register', 'MailController@sendMailRegisterCategory')->name('mail.register-category');

@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" />
 
     <!-- CSS de cero -->
-    <link rel="stylesheet" href="{{ asset('/css/main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('/css/main.css') }}" />
 
     <!-- CSS timepicker -->
-    <link  href="{{ asset('/css/mdtimepicker.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/mdtimepicker.css') }}" rel="stylesheet">
 
 
     @yield('third_party_stylesheets')
@@ -76,6 +76,11 @@
 
         <!-- Left side column. contains the logo and sidebar -->
         @include('layouts.sidebar')
+
+        <!-- Ajax loader -->
+        <div class="ajax-loader">
+            <img src="{{ asset('/images/loader3.gif') }}" class="img-responsive" />
+        </div>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">

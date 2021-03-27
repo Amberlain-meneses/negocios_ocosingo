@@ -48,27 +48,36 @@
 </div>
 
 <!-- Phone Field -->
-<div class="form-group col-sm-4">
+<div class="form-group col-sm-3">
     {!! Form::label('phone', 'Número de teléfono:') !!}
     {!! Form::text('phone', null, ['class' => 'form-control','maxlength' => 10,'minlength' => 10]) !!}
 </div>
 
 <!-- Service Id Field -->
-<div class="form-group col-sm-4">
+<div class="form-group col-sm-3">
     {!! Form::label('service_id', 'Tipo de servicio:') !!}
     {!! Form::select('service_id', $type_serviceItems, null, ['class' => 'form-control custom-select']) !!}
 </div>
 
 
 <!-- Category Id Field -->
-<div class="form-group col-sm-4">
+<div class="form-group col-sm-3">
     {!! Form::label('category_id', 'Categoría:') !!}
     {!! Form::select('category_id', $categoryItems, null, ['class' => 'form-control custom-select']) !!}
 </div>
 
+<!-- Category Id Field -->
+<div class="form-group col-sm-3">
+    @if (Auth::user()->getRoleNames()[0] != "superAdmin")
+    <input type="checkbox" id="category-registered" value="false">
+    {!! Form::label('not_registered', 'No está registrada:') !!}
+    @endif
+</div>
 
 <!-- References Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('references', 'Referencias:') !!}
     {!! Form::text('references', null, ['class' => 'form-control']) !!}
 </div>
+
+@include('components.modal-register-category')

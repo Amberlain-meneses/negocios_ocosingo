@@ -17,7 +17,8 @@ class Category extends Model
      */
     protected $fillable = [
         'category_name', 
-        'is_verified'
+        'is_verified',
+        'image'
     ];
 
     //Reglas de validación
