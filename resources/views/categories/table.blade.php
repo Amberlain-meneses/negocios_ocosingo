@@ -1,5 +1,5 @@
-<div class="table-responsive">
-    <table class="table" id="categories-table">
+<div class="table-responsive ">
+    <table class="table overflow-auto" id="categories-table">
         <thead>
             <tr>
                 <th>Categorías</th>
