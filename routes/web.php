@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    //return view('auth.login');
+    // return view('auth.login');
     return view('welcome');
 });
 
@@ -145,3 +145,11 @@ Route::group(['middleware' => ['permission:categories.show']], function () {
 Route::group(['middleware' => ['permission:categories.destroy']], function () {
     Route::delete('categories/{category}', 'CategoryController@destroy')->name('categories.destroy');
 });
+// Rutas para usuarios que visitan el sitio
+Route::get('/businnes-all', function () {
+    return view('welcome');
+})->name('business');
+
+// Route::get('/categories', function () {
+//     return view('welcome');
+// })->name('categories');
