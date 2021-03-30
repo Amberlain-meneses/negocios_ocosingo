@@ -146,7 +146,15 @@ Route::group(['middleware' => ['permission:categories.destroy']], function () {
     Route::delete('categories/{category}', 'CategoryController@destroy')->name('categories.destroy');
 });
 
+//Ruta para usuarios visitates
+Route::get('/businnes-all', function(){
+    return view(('welcome'));
+})->name('business');
 
+//ruta para categorials
+Route::get('/category-all', function(){
+    return view(('categorias'));
+})->name('categories');
 
 //Envía mail al admin para registro de categorías
 Route::post('/request-category-register', 'MailController@sendMailRegisterCategory')->name('mail.register-category');

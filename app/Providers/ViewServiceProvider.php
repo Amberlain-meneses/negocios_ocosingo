@@ -8,6 +8,7 @@ use Spatie\Permission\Models\Role;
 
 use App\Category;
 use App\TypeService;
+use App\Models\Business;
 
 use Illuminate\Support\ServiceProvider;
 use View;
@@ -47,6 +48,16 @@ class ViewServiceProvider extends ServiceProvider
             $type_serviceItems = TypeService::pluck('service_type','id')->toArray();
             $view->with('type_serviceItems', $type_serviceItems);
         });
-        //
+        //pasa los datos de productos a welcome
+        View::composer(['welcome'], function($view){
+            $bussiness = Business::all();
+            $view->with('bussiness', $bussiness);
+        });
+
+        //pasa los datos de categorías
+        View::composer(['categorias'], function($view){
+            $category = Category::all();
+            $view->with('bussiness', $category);
+        });
     }
 }
