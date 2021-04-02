@@ -13,10 +13,10 @@
             <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('business')}}">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="{{route('business')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('categories')}}">Categorías</a>
+                        <a class="nav-link active" href="{{route('categories')}}">Categorías</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -61,7 +61,37 @@
         </div>
     </div>
 </div>
-<body>
-
-</body>
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <h4>Compania</h4>
+                <h3 style="color: #fffff">RenderX</h3>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestros Servicios</h4>
+                <ul class="ul-footer">
+                    <li>Dessarrollo web</li>
+                    <li>Desarrollo móvil</li>
+                    <li>Modelado 3D</li>
+                    <li>Landing page</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>¿Quiene somos?</h4>
+                <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
+                video, creación de landing page,
+                aniamción 2D y 3D, desarrollo de aplicaciones web y
+                móviles.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Siguenos en</h4>
+                <div class="socialmedia">
+                    <a href="https://www.facebook.com/renderxdigital" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 @endsection

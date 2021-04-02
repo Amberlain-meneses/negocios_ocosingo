@@ -115,5 +115,40 @@
         </div>
     </div>
 </div>
+
+<footer class="footer">
+    <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <h4>Compania</h4>
+                <h3>RenderX</h3>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestros Servicios</h4>
+                <ul class="ul-footer">
+                    <li>Dessarrollo web</li>
+                    <li>Desarrollo móvil</li>
+                    <li>Modelado 3D</li>
+                    <li>Landing page</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sobre Nosotros</h4>
+                <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
+                video, creación de landing page,
+                aniamción 2D y 3D, desarrollo de aplicaciones web y
+                móviles.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Siguenos en</h4>
+                <div class="socialmedia">
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 <!-- Fin de los produtos -->
 @endsection
