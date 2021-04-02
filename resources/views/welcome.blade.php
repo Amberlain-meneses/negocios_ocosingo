@@ -80,41 +80,60 @@
         </div>
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <!-- Aqui ermina el Slider -->
-<!-- Aqui visualizaremos los productos -->
-<div class="py-5 mt-5">
-    <div class="container mb-2">
-        <div class="row">
-              @foreach($bussiness as $rules)
-            <div class="col-md-3">
-                <div class="card">
-                  <div class="item">
-                    <div class="img-box">
-                        <img src="images/{{$rules->image}}" alt="Awesome Sunglasses">
-            
+<!-- Aqui visualizaremos los negocios -->
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                @foreach($bussiness as $rules)
+                    <div class="col-md-3">
+                        <div class="card-business">
+                            <img src="images/{{$rules->image}}" alt="">
+                            <div class="card-body-business">
+                            <h4 class="text-center">{{$rules->name}}</h4>
+                            <ul class="mb-0">
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-road">
+                                    
+                                </i>
+                                {{$rules->adress}}
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-map-marker-alt">
+                                    
+                                </i>
+                                {{$rules->location}}
+                            </p>
+                        </li>
+                        <li >
+                            <p class="text-muted">
+                                <i class="fas fa-clock">
+                                    
+                                </i>
+                                {{$rules->schedule}}
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-phone">
+                                    
+                                </i>
+                                {{$rules->phone}}
+                            </p>
+                        </li>
+                    </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h2>Tienda <span>{{$rules->name}}</span></h2>
-                        <h2>Ubicación <span>{{$rules->adress}}</span></h2>
-                        <h2 class="moreDetails">Lugar <span>{{$rules->location}}</span></h2>
-                        <h2 class="modeDetails">Horarios <span>{{$rules->schedule}}</span></h2>
-                        <h2 class="moreDetails">Teléfono <span>{{$rules->phone}}</span></h2>
-            
-                        <a href="#" class="btn-warning"> Add to cart</a>
-            
-                    </div>
-                </div>
-                </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
-</div>
+<!-- termina negocios -->
 
 <footer class="footer">
     <div class="container-footer">
