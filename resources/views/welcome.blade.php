@@ -30,7 +30,7 @@
 <!-- aqui ermina el Nav bar -->
 
 <!-- Aqui empieza el Slider -->
-<section>
+<section class="mb-5">
     <div class="col-lg-12 mb-auto">
         <div>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -82,6 +82,9 @@
 </section>
 
 <!-- Aqui ermina el Slider -->
+<div>
+    <h2 class="text-center">Nuetsras Tiendas</h2>
+</div>
 <!-- Aqui visualizaremos los negocios -->
     <div class="py-5">
         <div class="container">
@@ -126,6 +129,9 @@
                             </p>
                         </li>
                     </ul>
+                        <div>
+                            <input class="btnViewBusinnes" type="submit" value="Ver Tienda">
+                        </div>
                             </div>
                         </div>
                     </div>
@@ -139,7 +145,7 @@
     <div class="container-footer">
         <div class="row-footer">
             <div class="footer-col">
-                <h4>Compania</h4>
+                
                 <h3>RenderX</h3>
             </div>
             <div class="footer-col">
