@@ -83,7 +83,7 @@
 
 <!-- Aqui ermina el Slider -->
 <div>
-    <h2 class="text-center">Nuetsras Tiendas</h2>
+    <h2 class="text-center">Nuetras Tiendas</h2>
 </div>
 <!-- Aqui visualizaremos los negocios -->
     <div class="py-5">
@@ -94,7 +94,7 @@
                         <div class="card-business">
                             <img src="images/{{$rules->image}}" alt="">
                             <div class="card-body-business">
-                            <h4 class="text-center">{{$rules->name}}</h4>
+                            <h4 class=" title-card-business">{{$rules->name}}</h4>
                             <ul class="mb-0">
                         <li>
                             <p class="text-muted">
@@ -166,9 +166,10 @@
             </div>
             <div class="footer-col">
                 <h4>Siguenos en</h4>
-                <div class="socialmedia">
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
+                <div class="ul-footer">
+                    <a href="https://www.facebook.com/renderxdigital" target="_black"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    
                 </div>
             </div>
         </div>

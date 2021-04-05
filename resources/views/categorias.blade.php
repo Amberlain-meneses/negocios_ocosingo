@@ -52,8 +52,11 @@
             <div class="card-category">
                 <img src="images/{{$category->image}}">
                 <div class="container-category-name">
-                  <h6><b>{{$category->category_name}}</b></h6> 
-                  <a href="" class="btn btn-outline-success">Ver más</a> 
+                  <h6 class="text-center"><b>{{$category->category_name}}</b></h6> 
+                  
+                </div>
+                <div>
+                    <input type="submit" value="Ver más" class="btnViewCategories" name="">
                 </div>
               </div>
             </div>
@@ -65,7 +68,7 @@
     <div class="container-footer">
         <div class="row-footer">
             <div class="footer-col">
-                <h4>Compania</h4>
+                
                 <h3 style="color: #fffff">RenderX</h3>
             </div>
             <div class="footer-col">
@@ -78,7 +81,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>¿Quiene somos?</h4>
+                <h4>¿Quiénes somos?</h4>
                 <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
                 video, creación de landing page,
                 aniamción 2D y 3D, desarrollo de aplicaciones web y
@@ -86,9 +89,9 @@
             </div>
             <div class="footer-col">
                 <h4>Siguenos en</h4>
-                <div class="socialmedia">
-                    <a href="https://www.facebook.com/renderxdigital" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <div class="ul-footer">
+                    <a href="https://www.facebook.com/renderxdigital" target="_black"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
