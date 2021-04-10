@@ -181,4 +181,5 @@ class BusinessController extends AppBaseController
         Auth::user()->hasRole('superAdmin') ? $is_verified = 1 : $is_verified = 0;
         return $is_verified;
      }
+
 }

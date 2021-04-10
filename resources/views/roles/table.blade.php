@@ -3,8 +3,8 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-        <th>Permisos</th>
-                <th colspan="3">Action</th>
+                <th>Permisos</th>
+                <th colspan="3">Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +26,7 @@
                         </a>
                         @endcan
                         @can('roles.destroy')
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Está seguro de eliminar este rol de usuario?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

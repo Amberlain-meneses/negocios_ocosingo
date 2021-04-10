@@ -3,11 +3,11 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-        <th>Email</th>
-        <th>Teléfono</th>
-        <th>Rol</th>
-        <th>URL</th>
-                <th colspan="3">Action</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Rol</th>
+                <th>URL</th>
+                <th colspan="3">Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
                         </a>
                         @endcan
                         @can('users.destroy')
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Estás seguro de eliminar el usuario?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

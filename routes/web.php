@@ -156,5 +156,10 @@ Route::get('/category-all', function(){
     return view(('categorias'));
 })->name('categories');
 
+//ruta para ver los negocios por categoría
+/*Route::get('/businessOfCategories', function () {
+    return view(('tiendaCategoria'));
+})->name('business');*/
+
 //Envía mail al admin para registro de categorías
 Route::post('/request-category-register', 'MailController@sendMailRegisterCategory')->name('mail.register-category');

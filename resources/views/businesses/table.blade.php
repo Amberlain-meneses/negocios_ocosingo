@@ -12,7 +12,7 @@
         <th>Categoría</th>
         <th>Referencias</th>
         <!--<th>Proietario</th>-->
-                <th colspan="3">Opción</th>
+                <th colspan="3">Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -42,7 +42,7 @@
                         </a>
                         @endcan
                         @can('businesses.destroy')
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el registro')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Está seguro de eliminar la tienda?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

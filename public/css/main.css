@@ -174,7 +174,7 @@ body {
 .card-business{
     margin: 2px 1em 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 450px;
+    height: 500px;
     width: 250px;
     border-radius: 10px;
     margin-bottom: 50px;
@@ -197,7 +197,6 @@ body {
     margin-bottom: 5px;
     list-style: none;
     cursor: pointer;
-    color: red;
 }
 
 .card-body-business ul li:not(:last-child){
@@ -210,7 +209,6 @@ body {
     font-size: 10px;
     text-transform: capitalize;
     text-decoration: none;
-    font-weight: 200;
     cursor: pointer;
     display: block;
     transition: 0.3s ease;
@@ -232,6 +230,7 @@ body {
     outline: none;
     width: 70%;
     height: 40px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 .btnViewBusinnes:hover{
     background: #69f0ae;
@@ -323,6 +322,8 @@ body {
 }
 
 .btnViewCategories{
+    text-decoration: none;
+    padding: 5px;
     background: #b9f6ca;
     border-radius: 2px;
     color: #ffffff;

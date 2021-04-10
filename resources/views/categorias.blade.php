@@ -56,7 +56,8 @@
                   
                 </div>
                 <div>
-                    <input type="submit" value="Ver más" class="btnViewCategories" name="">
+                   
+                    <a href="{{route('business')}}" class="btnViewCategories">Ver más</a>
                 </div>
               </div>
             </div>
@@ -84,7 +85,7 @@
                 <h4>¿Quiénes somos?</h4>
                 <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
                 video, creación de landing page,
-                aniamción 2D y 3D, desarrollo de aplicaciones web y
+                animación 2D y 3D, desarrollo de aplicaciones web y
                 móviles.</p>
             </div>
             <div class="footer-col">

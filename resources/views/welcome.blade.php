@@ -83,7 +83,7 @@
 
 <!-- Aqui ermina el Slider -->
 <div>
-    <h2 class="text-center">Nuetras Tiendas</h2>
+    <h2 class="text-center">Nuestras Tiendas</h2>
 </div>
 <!-- Aqui visualizaremos los negocios -->
     <div class="py-5">
@@ -96,6 +96,15 @@
                             <div class="card-body-business">
                             <h4 class=" title-card-business">{{$rules->name}}</h4>
                             <ul class="mb-0">
+                            
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-store">
+                                    
+                                </i>
+                                {{$rules->category->category_name}}
+                            </p>
+                        </li>
                         <li>
                             <p class="text-muted">
                                 <i class="fas fa-road">
@@ -128,6 +137,7 @@
                                 {{$rules->phone}}
                             </p>
                         </li>
+                        
                     </ul>
                         <div>
                             <input class="btnViewBusinnes" type="submit" value="Ver Tienda">
@@ -161,7 +171,7 @@
                 <h4>Sobre Nosotros</h4>
                 <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
                 video, creación de landing page,
-                aniamción 2D y 3D, desarrollo de aplicaciones web y
+                animación 2D y 3D, desarrollo de aplicaciones web y
                 móviles.</p>
             </div>
             <div class="footer-col">

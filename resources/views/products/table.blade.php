@@ -4,9 +4,9 @@
             <tr>
                 <th>Nombre</th>
                 <th>Imagen</th>
-        <th>Precio</th>
-        <th>Descripción</th>
-        <th>Slug</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Slug</th>
                 <th colspan="3">Opciones</th>
             </tr>
         </thead>
@@ -33,7 +33,7 @@
                         </a>
                         @endcan
                         @can('products.destroy')
-                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el registro?')"]) !!}
+                        {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Desea eliminar el producto?')"]) !!}
                         @endcan
                     </div>
                     {!! Form::close() !!}

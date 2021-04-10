@@ -25,5 +25,10 @@ class Category extends Model
     public static $rules = [
         'category_name' => 'required',
     ];
+
+    // indicamos que una categoría tiene muchos negocios
+    /*public function business(){
+        return $this->hasMany(Business::class);
+    }*/
     
 }

@@ -59,5 +59,11 @@ class ViewServiceProvider extends ServiceProvider
             $category = Category::all();
             $view->with('bussiness', $category);
         });
+
+        View::composer(['tiendaCategoria'], function($view){
+            $bussiness = Business::all();
+            $view->with('bussiness', $bussiness);
+        });
+
     }
 }
