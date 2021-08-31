@@ -137,11 +137,19 @@
                                 {{$rules->phone}}
                             </p>
                         </li>
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-truck">
+                                    
+                                </i>
+                                {{$rules->service->service_type}}
+                            </p>
+                        </li>
                         
                     </ul>
-                        <div>
+                        <!--<div>
                             <input class="btnViewBusinnes" type="submit" value="Ver Tienda">
-                        </div>
+                        </div>-->
                             </div>
                         </div>
                     </div>

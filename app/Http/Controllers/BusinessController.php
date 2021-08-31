@@ -8,6 +8,8 @@ use App\Repositories\BusinessRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Category;
+use App\Models\Business;
 use Flash;
 use Response;
 
@@ -157,6 +159,15 @@ class BusinessController extends AppBaseController
         Flash::success('Negocio eliminado correctamente');
 
         return redirect(route('businesses.index'));
+    }
+
+    public function bussinesByCategory($category){
+        
+        $categories = Category::where('category_name', "=", $category)->first();
+        $bussiness = Business::where('category_id', "=", $categories->id)->get();
+        return view('tiendaCategoria')->with("bussiness", $bussiness);
+        //dd($categories);
+        //dd($bussiness);
     }
 
     /**

@@ -57,7 +57,7 @@
                 </div>
                 <div>
                    
-                    <a href="{{route('business')}}" class="btnViewCategories">Ver más</a>
+                    <a href="{{route('businessByCategory', $category->category_name)}}" class="btnViewCategories">Ver más</a>
                 </div>
               </div>
             </div>
