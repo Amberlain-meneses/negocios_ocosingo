@@ -1,12 +1,6 @@
-@extends('layouts.front')
+@extends('layouts.fronttienda')
 @section('content')
-
-
-<div>
-    <h2 class="text-center">Nuestras Tiendas</h2>
-</div>
-<!-- Aqui visualizaremos los negocios -->
-    <div class="py-5">
+<div class="py-5">
         <div class="container">
             <div class="row">
                 @foreach($bussiness as $rules)
@@ -77,7 +71,4 @@
             </div>
         </div>
     </div>
-<!-- termina negocios -->
-
-<!-- Fin de los produtos -->
-@endsection
+    @endsection

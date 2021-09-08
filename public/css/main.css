@@ -189,9 +189,10 @@ body {
     justify-content: center;
 }
 .card-business img{
-    width: 250px;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
+   margin-left: 25px;
+   width: 200px;
+   height: 200px;
+    border-radius: 50%;
 }
 .card-body-business ul{
     margin-bottom: 5px;

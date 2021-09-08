@@ -162,10 +162,10 @@ class BusinessController extends AppBaseController
     }
 
     public function bussinesByCategory($category){
-        
+        //dd($category);
         $categories = Category::where('category_name', "=", $category)->first();
         $bussiness = Business::where('category_id', "=", $categories->id)->get();
-        return view('tiendaCategoria')->with("bussiness", $bussiness);
+        return view('tienda', compact('bussiness'));
         //dd($categories);
         //dd($bussiness);
     }

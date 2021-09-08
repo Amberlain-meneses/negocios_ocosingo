@@ -12,12 +12,12 @@ class UserObserver
      * @param  \App\User  $user
      * @return void
      */
-    public function created(User $user)
+    /*public function created(User $user)
     {
         $user->default_url = '/products';
         $user->save();
         $user->assignRole('seller');
-    }
+    }*/ 
 
     /**
      * Handle the user "updated" event.

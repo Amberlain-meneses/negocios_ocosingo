@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- Aqui empieza el Nav bar-->
+    <!--Navbar-->
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="{{route('business')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('categories')}}">Categorías</a>
+                        <a class="nav-link active" href="{{route('categories')}}">Categorías</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -45,69 +45,30 @@
         </div>
     </nav>
 </div>
-<!-- aqui ermina el Nav bar -->
+<!--Slider-->
 
-<!-- Aqui empieza el Slider -->
-<section class="mb-5">
-    <div class="col-lg-12 mb-auto">
-        <div>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="{{asset('/img/ban1.png')}}" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>El mejor lugar para comprar</h5>
-                            <p>Todos los productos en un solo lugar</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="{{asset('/img/ban2.png')}}" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Lo mejor esta por llegar</h5>
-                            <p>Tienes todo a la mano</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="{{asset('/img/ban3.png')}}" class="d-block w-100" alt="...">
-                        
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Todo lo que buscabas llego</h5>
-                            <p>Cotiza con nosotros</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+<section class="sectionCategory">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="titleHero">Crece con <br>Nosotros</h1>
+            </div>
+            <div class="col">
+                <img class="img-undraw-category" src="img/undraw1.svg" alt="">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Aqui ermina el Slider -->
 @yield('content')
 
+<!--Footer-->
 <footer class="footer">
     <div class="container-footer">
         <div class="row-footer">
             <div class="footer-col">
                 
-                <h3>RenderX</h3>
+                <h3 style="color: #fffff">RenderX</h3>
             </div>
             <div class="footer-col">
                 <h4>Nuestros Servicios</h4>
@@ -119,7 +80,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Sobre Nosotros</h4>
+                <h4>¿Quiénes somos?</h4>
                 <p>Somos una empresa dedicada a ofrecer servicios de: Diseño gráfico, edición de
                 video, creación de landing page,
                 animación 2D y 3D, desarrollo de aplicaciones web y
@@ -127,16 +88,14 @@
             </div>
             <div class="footer-col">
                 <h4>Siguenos en</h4>
-                <div class="ul-footer">
+                    <div class="ul-footer">
                     <a href="https://www.facebook.com/renderxdigital" target="_black"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
