@@ -9,6 +9,8 @@
     <div class="py-5">
         <div class="container">
             <div class="row">
+               
+              
                 @foreach($bussiness as $rules)
                     <div class="col-md-3">
                         <div class="card-business">
@@ -27,20 +29,21 @@
                         </li>
                         <li>
                             <p class="text-muted">
-                                <i class="fas fa-road">
-                                    
-                                </i>
-                                {{$rules->adress}}
-                            </p>
-                        </li>
-                        <li>
-                            <p class="text-muted">
                                 <i class="fas fa-map-marker-alt">
                                     
                                 </i>
                                 {{$rules->location}}
                             </p>
                         </li>
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-road">
+                                    
+                                </i>
+                                {{$rules->adress}}
+                            </p>
+                        </li>
+                        
                         <li >
                             <p class="text-muted">
                                 <i class="fas fa-clock">
@@ -74,6 +77,7 @@
                         </div>
                     </div>
                 @endforeach
+             
             </div>
         </div>
     </div>

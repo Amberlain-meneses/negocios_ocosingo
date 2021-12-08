@@ -3,7 +3,9 @@
 <div class="py-5">
         <div class="container">
             <div class="row">
+           
                 @foreach($bussiness as $rules)
+                    
                     <div class="col-md-3">
                         <div class="card-business">
                             <img src="../images/{{$rules->image}}" alt="">

@@ -73,6 +73,15 @@ class Business extends Model
      * @var array
      */
     public static $rules = [
+
+
+
+
+
+
+
+
+        
         'name' => 'required|string|max:100',
         'image' => 'required',
         'adress' => 'required|string|max:100',

@@ -161,6 +161,10 @@ class BusinessController extends AppBaseController
         return redirect(route('businesses.index'));
     }
 
+    /**
+     * Get business by category
+     * @param $category
+     */
     public function bussinesByCategory($category){
         //dd($category);
         $categories = Category::where('category_name', "=", $category)->first();
@@ -168,6 +172,26 @@ class BusinessController extends AppBaseController
         return view('tienda', compact('bussiness'));
         //dd($categories);
         //dd($bussiness);
+    }
+
+    /**
+     * Buscar tiendas por nombre
+     * @param Request $request
+     */
+
+    public function searchBusiness(Request $request){
+
+        
+        if($request){
+            $querySearch = trim($request->get('search'));
+            
+            $bussiness = Business::where('name', 'LIKE','%'.$querySearch.'%' )
+                ->orderBy('id', 'asc')
+                ->get();
+
+            return view('welcome', compact('bussiness')); 
+        }
+        
     }
 
     /**
