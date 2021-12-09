@@ -37,8 +37,8 @@
                         <a class="nav-link" href="{{route('categories')}}">Categorías</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar tienda" aria-label="Search">
+                <form action="{{route('search')}}" class="d-flex">
+                    <input class="form-control me-2" name="search" type="search" placeholder="Buscar tienda" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>

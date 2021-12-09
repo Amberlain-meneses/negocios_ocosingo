@@ -3,6 +3,7 @@
 <!-- Aqui empieza el card -->
 <h2 class="text-center">Nuestras categorías</h2>
 
+
 <div class="py-5">
     <div class="container">
         <div class="row">
@@ -23,6 +24,11 @@
               </div>
             </div>
             @endforeach
+        </div>
+        <div class="m-0 row justify-content-center align-items-center">
+            <div class="col-auto justify-content-center align-items-center p-5">
+                    {{$bussiness->links()}}
+            </div>
         </div>
     </div>
 </div>

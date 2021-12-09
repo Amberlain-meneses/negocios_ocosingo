@@ -184,12 +184,13 @@ class BusinessController extends AppBaseController
         
         if($request){
             $querySearch = trim($request->get('search'));
-            
-            $bussiness = Business::where('name', 'LIKE','%'.$querySearch.'%' )
+
+            $bussiness = Business::where('name','LIKE','%'.$querySearch.'%' )
                 ->orderBy('id', 'asc')
                 ->get();
-
-            return view('welcome', compact('bussiness')); 
+            
+            //\Log::info(view('welcome', compact('bussiness')));
+            return view('search', ['bussiness'=> $bussiness, 'search' => $querySearch]); 
         }
         
     }

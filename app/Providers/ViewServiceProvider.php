@@ -50,13 +50,13 @@ class ViewServiceProvider extends ServiceProvider
         });
         //pasa los datos de productos a welcome
         View::composer(['welcome'], function($view){
-            $bussiness = Business::all();
+            $bussiness = Business::paginate(8);
             $view->with('bussiness', $bussiness);
         });
 
         //pasa los datos de categorías
         View::composer(['categorias'], function($view){
-            $category = Category::all();
+            $category = Category::paginate(8);
             $view->with('bussiness', $category);
         });
 

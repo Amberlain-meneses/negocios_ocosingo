@@ -1,16 +1,18 @@
 @extends('layouts.front')
 @section('content')
 
-
-<div>
-    <h2 class="text-center">Nuestras Tiendas</h2>
-</div>
+    @if($search)
+        <div>
+            <h2 class="text-center">Nuestras Tiendas</h2>
+        </div>
+    @endif       
 <!-- Aqui visualizaremos los negocios -->
     <div class="py-5">
         <div class="container">
-            <div class="row">
-               
-              
+                @if($search)
+                <div class="alert alert-success" role="alert">
+                Los resultados de tu busqueda'{{$search}}' son:
+                </div>
                 @foreach($bussiness as $rules)
                     <div class="col-md-3">
                         <div class="card-business">
@@ -77,14 +79,16 @@
                         </div>
                     </div>
                 @endforeach
+
+                @else
+                <div class="alert alert-danger" role="alert">
+                No se encontraron resultados de tu busqueda '{{$search}}' 
+                </div>
+                @endif
+                
              
             </div>
-            
-             <div class="m-0 row justify-content-center align-items-center">
-                <div class="col-auto justify-content-center align-items-center p-5">
-                    {{$bussiness->links()}}
-                </div>
-            </div>
+           
         </div>
         
     </div>
