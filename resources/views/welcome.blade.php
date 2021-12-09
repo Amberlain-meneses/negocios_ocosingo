@@ -57,7 +57,8 @@
                                 <i class="fas fa-phone">
                                     
                                 </i>
-                                {{$rules->phone}}
+                                <a href="https://wa.me/52{{$rules->phone}}?text=Solicito%20más%20información" target="_blank">{{$rules->phone}}</a>
+                                
                             </p>
                         </li>
                         <li>

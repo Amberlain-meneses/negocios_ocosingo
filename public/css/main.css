@@ -201,6 +201,15 @@ body {
     cursor: pointer;
 }
 
+.card-body-business  li a{
+    text-decoration: none;
+    color: #363636;
+}
+.card-body-business  li a:hover{
+    color: green;
+    padding: 10px;
+}
+
 .card-body-business ul li:not(:last-child){
    
     margin-bottom: 5px;

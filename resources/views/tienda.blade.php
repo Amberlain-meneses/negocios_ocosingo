@@ -23,20 +23,21 @@
                         </li>
                         <li>
                             <p class="text-muted">
-                                <i class="fas fa-road">
-                                    
-                                </i>
-                                {{$rules->adress}}
-                            </p>
-                        </li>
-                        <li>
-                            <p class="text-muted">
                                 <i class="fas fa-map-marker-alt">
                                     
                                 </i>
                                 {{$rules->location}}
                             </p>
                         </li>
+                        <li>
+                            <p class="text-muted">
+                                <i class="fas fa-road">
+                                    
+                                </i>
+                                {{$rules->adress}}
+                            </p>
+                        </li>
+                        
                         <li >
                             <p class="text-muted">
                                 <i class="fas fa-clock">
@@ -50,7 +51,7 @@
                                 <i class="fas fa-phone">
                                     
                                 </i>
-                                {{$rules->phone}}
+                                <a href="https://wa.me/52{{$rules->phone}}?text=Solicito%20más%20información" target="_blank">{{$rules->phone}}</a>
                             </p>
                         </li>
                         <li>
