@@ -44,6 +44,12 @@ class ViewServiceProvider extends ServiceProvider
             $categoryItems = Category::pluck('category_name','id')->toArray();
             $view->with('categoryItems', $categoryItems);
         });
+
+        View::composer(['products.fields'], function ($view) {
+            $storeItems = Business::pluck('name','id')->toArray();
+            $view->with('storeItems', $storeItems);
+        });
+
         View::composer(['businesses.fields'], function ($view) {
             $type_serviceItems = TypeService::pluck('service_type','id')->toArray();
             $view->with('type_serviceItems', $type_serviceItems);

@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Repositories\ProductRepository;
 use App\Http\Controllers\AppBaseController;
 use App\Models\Product;
+use App\Models\Business;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -156,6 +157,13 @@ class ProductController extends AppBaseController
         return redirect(route('products.index'));
     }
 
+    public function productByBusiness($business){
+        $business = Business::where('name', "=", $business)->first();
+        $product = Product::where('business_id', "=", $business->id)->get();
+        //dd($product);
+        return view('products', compact('product'));
+    }
+
      /**
      * Se encargan de subir la imagen principal
      * y retorna el nombre de ese archivo
@@ -172,4 +180,8 @@ class ProductController extends AppBaseController
             return $image;
         }
     }
+    public function isVerified(){
+        Auth::user()->hasRole('superAdmin') ? $is_verified = 1 : $is_verified = 0;
+        return $is_verified;
+     }
 }

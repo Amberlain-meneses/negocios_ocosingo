@@ -159,6 +159,8 @@ Route::get('/category-all', function(){
 //ruta para ver los negocios por categoría
 Route::get('/bussinesByCategory/{category}','BusinessController@bussinesByCategory' )->name('businessByCategory');
 
+Route::get('/productByBusiness/{business}', 'ProductController@productByBusiness')->name('productByBusiness');
+
 Route::get('/search/', 'BusinessController@searchBusiness')->name('search');
 
 //Envía mail al admin para registro de categorías

@@ -71,9 +71,9 @@
                         </li>
                         
                     </ul>
-                        <!--div>
-                            <input class="btnViewBusinnes" type="submit" value="Ver Tienda">
-                        </div-->
+                        <div>
+                            <a class="btnViewBusinnes"  href="{{route('productByBusiness', $rules->name)}}"> Ver prouctos</a>
+                        </div>
                             </div>
                         </div>
                     </div>

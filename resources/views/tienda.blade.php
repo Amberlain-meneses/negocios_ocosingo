@@ -1,7 +1,12 @@
 @extends('layouts.fronttienda')
 @section('content')
+  
+<div>
+    <h2 class="text-center">Nuestras Tiendas</h2>
+</div>
 <div class="py-5">
         <div class="container">
+       
             <div class="row">
            
                 @foreach($bussiness as $rules)
@@ -64,13 +69,14 @@
                         </li>
                         
                     </ul>
-                        <!--<div>
-                            <input class="btnViewBusinnes" type="submit" value="Ver Tienda">
-                        </div>-->
+                        <div>
+                            <a class="btnViewBusinnes" href="{{route('productByBusiness', $rules->name)}}">Ver prouctos</a>
+                        </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
+                
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
             <td>{{ $product->price }}</td>
             <td>{{ $product->description }}</td>
             <td>{{ $product->slug }}</td>
-            category
+            
                 <td width="120">
                     {!! Form::open(['route' => ['products.destroy', $product->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -39,3 +39,8 @@
     {!! Form::label('slug', 'Slug:') !!}
     {!! Form::text('slug', null, ['class' => 'form-control', 'readonly']) !!}
 </div>
+
+<div class="form-group col-sm-3">
+    {!! Form::label('business_id', 'Tienda:') !!}
+    {!! Form::select('business_id', $storeItems, null, ['class' => 'form-control custom-select']) !!}
+</div>

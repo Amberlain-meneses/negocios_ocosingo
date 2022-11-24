@@ -175,25 +175,24 @@ class BusinessController extends AppBaseController
     }
 
     /**
-     * Buscar tiendas por nombre
+     * Search business by name and category
      * @param Request $request
      */
-
     public function searchBusiness(Request $request){
 
-        
         if($request){
             $querySearch = trim($request->get('search'));
 
-            $bussiness = Business::where('name','LIKE','%'.$querySearch.'%' )
+            $bussiness = Business::where('name', 'LIKE','%'.$querySearch.'%')
+                ->orWhereHas('category', function($q) use ($querySearch){
+                    $q->where('category_name', 'LIKE', '%'.$querySearch.'%');
+                })
                 ->orderBy('id', 'asc')
                 ->get();
-            
-            //\Log::info(view('welcome', compact('bussiness')));
-            return view('search', ['bussiness'=> $bussiness, 'search' => $querySearch]); 
+            return view('tienda', ['bussiness' => $bussiness, 'search'=> $querySearch]);    
         }
-        
     }
+  
 
     /**
      * Se encargan de subir la imagen principal

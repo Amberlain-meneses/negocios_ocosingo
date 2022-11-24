@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Controllers\Business;
 
 /**
  * Class Product
@@ -62,6 +63,10 @@ class Product extends Model
         'slug' => 'string',
         'image' => 'required'
     ];
+    
+    public function business(){
+        return $this->hasOne(Business::class, 'id', 'business_id');
+    }
 
     
 }

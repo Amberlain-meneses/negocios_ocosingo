@@ -104,9 +104,5 @@ class Business extends Model
         return $this->hasOne(TypeService::class,'id','service_id');
     }
 
-    //relacionar que un negocio pertenece a una categoría
-    /*public function categoria(){
-        
-        return $this->belongsTo(Category::class, 'id', 'category_id');
-    }*/
+
 }
